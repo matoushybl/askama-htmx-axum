@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello, world!</title>  
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+</head>
+<body>
+    <h1>Decrypt wedding card</h1>
+    <form hx-post="/decrypt" hx-target="#decrypt_result">
+        <div>
+            <textarea name="text" rows="10" cols="50"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Decrypt" />  
+        </div>
+    </form>
+    <div id="decrypt_result"></div>
+    <h1>Encrypt wedding card</h1>
+    <form hx-post="/encrypt" hx-target="#encrypt_result">
+        <div>
+            <textarea name="text" rows="10" cols="50"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Encrypt" />  
+        </div>
+    </form>
+    <div id="encrypt_result"></div>
+</body>
+</html>
